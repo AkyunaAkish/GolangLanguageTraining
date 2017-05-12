@@ -18,11 +18,15 @@ func main() {
 	//conversion of string to slice of bytes
 	//each character can be represented by 1-4 bytes
 	//because UTF-8 is a 4 byte code scheme
+
+	//double quotes are an interpreted string value
+	//that does not maintain spacing and line breaks
 	fmt.Println([]byte("Hello"))
 
 	for i := 50; i <= 140; i++ {
 		fmt.Println(i, " - ", string(i), " - ", []byte(string(i)))
 	}
+	//single quotes return the rune int32 value
 	foo := 'a'
 	fmt.Println(foo)               //97 because that is the UTF-8/ascii number representation of the character a
 	fmt.Printf("%T \n", foo)       //int32 is the type of the rune
@@ -31,4 +35,7 @@ func main() {
 	// for i := 50; i <= 140; i++ {
 	// 	fmt.Printf("%v - %v - %v \n", i, string(i), []byte(string(i)))
 	// }
+	//raw string literal that maintains spacing:
+	// `hello
+	//  world`
 }
