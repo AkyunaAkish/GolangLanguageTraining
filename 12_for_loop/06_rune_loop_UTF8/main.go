@@ -23,6 +23,10 @@ func main() {
 	for i := 50; i <= 140; i++ {
 		fmt.Println(i, " - ", string(i), " - ", []byte(string(i)))
 	}
+	foo := 'a'
+	fmt.Println(foo)               //97 because that is the UTF-8/ascii number representation of the character a
+	fmt.Printf("%T \n", foo)       //int32 is the type of the rune
+	fmt.Printf("%T \n", rune(foo)) //int32 is the type of the rune converted to type rune explicitly
 
 	// for i := 50; i <= 140; i++ {
 	// 	fmt.Printf("%v - %v - %v \n", i, string(i), []byte(string(i)))
