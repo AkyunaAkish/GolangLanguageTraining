@@ -12,7 +12,7 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-
+	// bs is a slice of bytes byte[]
 	bs, _ := ioutil.ReadAll(res.Body)
 	str := string(bs)
 	fmt.Println(str)
