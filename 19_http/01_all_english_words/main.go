@@ -14,6 +14,7 @@ func main() {
 	}
 	// bs is a slice of bytes byte[]
 	bs, _ := ioutil.ReadAll(res.Body)
+	defer res.Body.Close()
 	str := string(bs)
 	fmt.Println(str)
 }

@@ -23,6 +23,7 @@ func main() {
 	//piece of data at a time
 	sc := bufio.NewScanner(res.Body)
 	sc.Split(bufio.ScanWords)
+	defer res.Body.Close()
 
 	//this goes over the scanned array
 	for sc.Scan() {
